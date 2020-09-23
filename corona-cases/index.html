@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corona Cases</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 id="title">COVID-19 cases in <span id="country"></span> <img src="" id="flag"></h1>
+
+    <div class="content">
+        <div class="card ac">
+            <i class="fa fa-tachometer"></i>
+            <h5>Active Cases</h5>
+            <span id="active"></span>
+        </div>
+        <div class="card tc">
+            <i class="fa fa-th-list"></i>
+            <h5>Total Cases</h5>
+            <span id="total"></span>
+        </div>
+        <div class="card cc">
+            <i class="fa fa-times-circle"></i>
+            <h5>Critical Cases</h5>
+            <span id="critical"></span>
+        </div>
+        <div class="card td">
+            <i class="fa fa-times"></i>
+            <h5>Total Deaths</h5>
+            <span id="deaths"></span>
+        </div>
+        <div class="card rc">
+            <i class="fa fa-check-square"></i>
+            <h5>Recovered Cases</h5>
+            <span id="recovered"></span>
+        </div>
+        <div class="card tt">
+            <i class="fa fa-eye"></i>
+            <h5>Total Tests</h5>
+            <span id="tests"></span>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+        let cntry = document.getElementById;
+        fetch('https://corona.lmao.ninja/v2/countries/Egypt')
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                console.log(data);
+                document.getElementById("flag").src = data.countryInfo.flag;
+                document.getElementById("country").innerHTML = data.country;
+                document.getElementById("active").innerHTML = data.active.toLocaleString();
+                document.getElementById("total").innerHTML = data.cases.toLocaleString();
+                document.getElementById("critical").innerHTML = data.critical.toLocaleString();
+                document.getElementById("deaths").innerHTML = data.deaths.toLocaleString();
+                document.getElementById("recovered").innerHTML = data.recovered.toLocaleString();
+                document.getElementById("tests").innerHTML = data.tests.toLocaleString();
+            });
+    </script>
+
+    <footer>
+        Developed by Omar AbdulRahman
+    </footer>
+
+</body>
+
+</html>
