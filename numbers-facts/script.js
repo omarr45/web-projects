@@ -7,7 +7,15 @@ const facts = document.getElementById('facts');
 const myNumber = document.getElementById('dispNumber');
 var query = 45;
 
-async function Search() {
+function Search() {
+    getNumber().catch(error => {
+        console.log("wrong format");
+        alert("Wrong number format!\nTry again please");
+        document.Form.Number.value = "";
+    })
+}
+
+async function getNumber() {
 
     if (document.Form.Number.value != "")
         query = document.Form.Number.value;
