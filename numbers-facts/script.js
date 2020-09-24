@@ -5,7 +5,7 @@ const TEST = 'https://numbersapi.p.rapidapi.com/123/math?fragment=true&json=true
 
 const facts = document.getElementById('facts');
 const myNumber = document.getElementById('dispNumber');
-var query = 45;
+var query = null;
 
 function Search() {
     getNumber().catch(error => {
