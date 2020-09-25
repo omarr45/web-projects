@@ -83,15 +83,18 @@ footer a {
 
 @media screen and (max-width: 360px) {
     ul li a {
-        font-size: 0.7rem;
+        font-size: 1rem;
         padding: 10px 20px;
     }
     ul li {
-        height: 45px;
+        height: 50px;
+    }
+    ul {
+        margin-top: 10px;
     }
     #title {
-        font-size: 2.8rem;
-        margin-bottom: auto;
+        font-size: 2.7rem;
+        margin-bottom: 0;
     }
     footer {
         margin-top: 20px;
