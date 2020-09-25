@@ -36,7 +36,7 @@ body {
     margin-bottom: 40px;
 }
 
-@-webkit-keyframes glow {
+@keyframes glow {
     from {
         text-shadow: 0 0 10px #ffffff5b, 0 0 20px #ffffff5b, 0 0 40px #0e02b15b, 0 0 60px #0d02b15b, 0 0 70px #0d02b15b, 0 0 80px #0d02b15b, 0 0 90px #0d02b15b;
     }
