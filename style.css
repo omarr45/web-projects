@@ -63,6 +63,44 @@ footer a {
     color: #f44834;
 }
 
+@media screen and (max-width: 640px) {
+    ul li a {
+        font-size: 1.5rem;
+    }
+    footer {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    ul li a {
+        font-size: 1rem;
+    }
+    #title {
+        font-size: 2.8rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    ul li a {
+        font-size: 0.7rem;
+        padding: 10px 20px;
+    }
+    ul li {
+        height: 45px;
+    }
+    #title {
+        font-size: 2.8rem;
+        margin-bottom: auto;
+    }
+    footer {
+        margin-top: 20px;
+        padding-bottom: 0px;
+        height: 50px;
+        font-size: 0.8rem;
+    }
+}
+
 
 /* 
 Color Palettes {
